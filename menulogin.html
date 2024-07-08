@@ -17,17 +17,33 @@
         }
         .container {
             display: flex;
-            flex-direction: column; /* Ubah dari row ke column */
+            flex-direction: row;
             background-color: #fff;
             border-radius: 0px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             width: 90%;
-            max-width: 600px; /* Sesuaikan lebar maksimum */
-            padding: 40px; /* Tambahkan padding */
+            max-width: 1200px;
+            height: 90vh;
+        }
+        .image-container {
+            flex: 1;
+            background-image: url('gambar/image/gambarlogin.jpg'); /* Path ke gambar yang Anda unggah */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .login-container {
-            width: 100%;
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         .login-container h1 {
             color: green;
@@ -50,7 +66,7 @@
         }
         .login-container button {
             padding: 10px;
-            background-color: #4F4FB9;
+            background-color: #4CAF50;
             color: #fff;
             border: none;
             border-radius: 5px;
@@ -60,18 +76,11 @@
         .login-container button:hover {
             background-color: #45a049;
         }
-        .login-container .forgot-password {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .login-container .forgot-password a {
-            margin-left: 20px;
-        }
         .login-container a {
             color: blue;
             text-decoration: none;
+            margin-top: 10px;
+            text-align: center;
         }
         .login-container a:hover {
             text-decoration: underline;
@@ -80,7 +89,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
+            margin-top: 10px;
         }
         .login-container .google-login img {
             margin-right: 10px;
@@ -97,34 +106,28 @@
         .login-container .google-login button:hover {
             background-color: #f2f2f2;
         }
-        .login-container .signup {
-            text-align: center;
-            margin-top: 20px;
-        }
     </style>
 </head>
-
 <body>
     <div class="container">
+        <div class="image-container">
+            <img src="gambar/image/gambarlogin.jpg" alt="Gambar Login"> <!-- Tambahkan elemen img di dalam div -->
+        </div>
         <div class="login-container">
             <h1>Selera Timur</h1>
             <h2>Masuk</h2>
             <form>
                 <input type="email" placeholder="Email" required>
                 <input type="password" placeholder="Kata sandi" required>
-                <div class="forgot-password">
-                    <button type="submit">Masuk</button>
-                    <a href="#">Lupa kata sandi?</a>
-                </div>
+                <a href="#">Lupa kata sandi?</a>
+                <button type="submit">Masuk</button>
                 <div class="google-login">
                     <button>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" width="20px">
                         Masuk dengan Google
                     </button>
                 </div>
-                <div class="signup">
-                    <a href="#">Belum punya akun? Daftar</a>
-                </div>
+                <a href="#">Belum punya akun? Daftar</a>
             </form>
         </div>
     </div>
