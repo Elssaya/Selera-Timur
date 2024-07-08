@@ -61,10 +61,9 @@
             cursor: pointer;
             margin-bottom: 20px;
             font-size: 16px;
-            width: 150px; /* Ubah lebar sesuai kebutuhan */
-            margin-left: auto; /* Geser tombol ke kanan */
-            margin-right: auto; /* Geser tombol ke kiri */
-            
+            width: 150px;
+            margin-left: auto;
+            margin-right: auto;
         }
         button:hover {
             background-color: #06060f;
@@ -79,7 +78,7 @@
         }
         .image-container {
             flex: 1;
-            background-image: url('gambar/image/register.jpg');
+            background-image: url('https://i.pinimg.com/564x/5d/0a/74/5d0a742f570cf5319a83c9fb482c9109.jpg');
             background-size: cover;
             background-position: center;
             border-left: 1px solid #ccc;
@@ -95,7 +94,7 @@
             color: #4CAF50;
             font-weight: bold;
             margin: 0;
-            font-size: 38px; /* Ubah ukuran sesuai kebutuhan */
+            font-size: 38px;
         }
         .footer-item h3 {
             margin: 0 0 10px 0;
@@ -132,18 +131,24 @@
             <h2>Identitas saya</h2>
             <form>
                 <div class="input-group">
-                    <input type="text" placeholder="Nama depan">
-                    <input type="text" placeholder="Nama belakang">
+                    <label for="nama-depan">Nama depan:</label>
+                    <input type="text" id="nama-depan" name="nama-depan" placeholder="Nama depan">
+                    <label for="nama-belakang">Nama belakang:</label>
+                    <input type="text" id="nama-belakang" name="nama-belakang" placeholder="Nama belakang">
                 </div>
                 <div class="input-group">
-                    <input type="email" placeholder="Email">
-                    <input type="tel" placeholder="Nomor ponsel">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <label for="nomor-ponsel">Nomor ponsel:</label>
+                    <input type="tel" id="nomor-ponsel" name="nomor-ponsel" placeholder="Nomor ponsel">
                 </div>
                 <div class="input-group">
-                    <input type="password" placeholder="Kata sandi">
-                    <input type="password" placeholder="Konfirmasi kata sandi">
+                    <label for="kata-sandi">Kata sandi:</label>
+                    <input type="password" id="kata-sandi" name="kata-sandi" placeholder="Kata sandi">
+                    <label for="konfirmasi-kata-sandi">Konfirmasi kata sandi:</label>
+                    <input type="password" id="konfirmasi-kata-sandi" name="konfirmasi-kata-sandi" placeholder="Konfirmasi kata sandi">
                 </div>
-                <button type="submit">Masuk</button>
+                <button type="submit">Daftar</button>
                 <p class="login-link">Sudah punya akun? <a href="#">Masuk</a></p>
             </form>
         </div>
@@ -169,6 +174,5 @@
             </div>
         </div>
     </footer>
-    
 </body>
 </html>
