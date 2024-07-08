@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+       <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B5XDVK13JB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B5XDVK13JB');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selera Timur</title>
@@ -287,45 +296,70 @@
             height: 30px;
         }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-        }
-        .search-nav {
-            flex-grow: 1;
-            display: flex;
-            justify-content: center;
-        }
-        .search-nav input[type="text"] {
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            width: 200px; /* Lebar awal untuk input pencarian */
-        }
+        nav {
+    display: flex;
+    align-items: center;
+}
+
+.search-nav {
+    margin-right: 20px;
+}
+
+.search-nav input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: both; /* Enable resizing */
+    overflow: auto; /* Ensure overflow is handled */
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin-right: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: background-color 0.3s, border-color 0.3s;
+    resize: both; /* Enable resizing */
+    overflow: auto; /* Ensure overflow is handled */
+}
+
+ul li a:hover {
+    background-color: #ddd;
+    border-color: #ccc;
+}
+
+
     </style>
 </head>
 <body>
+    
     <header>
-        <div class="logo">Selera Timur</div>
-        <nav>
-            <nav class="search-nav">
-                <input type="text" placeholder="Pencarian">
-            </nav>
-            <ul>
-                <li><a href="menudaftar.html">Daftar</a></li>
-                <li><a href="menulogin.html">Masuk</a></li>
-            </ul>
+    <div class="logo">Selera Timur</div>
+    <nav>
+        <nav class="search-nav">
+            <input type="text" placeholder="Pencarian" class="resizable">
         </nav>
-    </header>
+        <ul>
+            <li><a href="menudaftar.html" class="resizable">Daftar</a></li>
+            <li><a href="menulogin.html" class="resizable">Masuk</a></li>
+        </ul>
+    </nav>
+</header>
+
 
     <!-- Slide 1: Welcome Section -->
     <div class="container">
