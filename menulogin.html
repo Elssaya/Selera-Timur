@@ -29,7 +29,7 @@
         }
         .image-container {
             flex: 1;
-            background-image: url('gambar/image/gambarlogin.jpg'); /* Path ke gambar yang Anda unggah */
+            background-image: url('https://i.pinimg.com/564x/7b/76/d5/7b76d56061e92a496d7323d258904709.jpg'); /* Path ke gambar yang Anda unggah */
             background-size: cover;
             background-position: center;
             position: relative;
@@ -66,6 +66,9 @@
         .login-container form {
             display: flex;
             flex-direction: column;
+        }
+        .login-container label {
+            margin-bottom: 5px;
         }
         .login-container input {
             margin-bottom: 20px;
@@ -128,24 +131,27 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="image-container">
-            <img src="gambar/image/gambarlogin.jpg" alt="Gambar Login">
+            <img src="https://i.pinimg.com/564x/7b/76/d5/7b76d56061e92a496d7323d258904709.jpg" alt="Gambar Login">
             <div class="back-icon">&#8592; </div>
         </div>
         <div class="login-container">
             <h1>Selera Timur</h1>
             <h2>Masuk</h2>
             <form>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Kata sandi" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <label for="password">Kata sandi:</label>
+                <input type="password" id="password" name="password" placeholder="Kata sandi" required>
                 <div class="forgot-password">
                     <button type="submit">Masuk</button>
                     <a href="#">Lupa kata sandi?</a>
                 </div>
                 <div class="google-login">
-                    <button>
+                    <button type="button">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" width="20px">
                         Masuk dengan Google
                     </button>
