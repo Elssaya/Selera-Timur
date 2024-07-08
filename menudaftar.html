@@ -14,7 +14,7 @@
             min-height: 100vh;
         }
         header {
-            background-color: #5bff84;
+            background-color: #f8f8f8;
             padding: 20px;
             text-align: center;
             border-bottom: 1px solid #ccc;
@@ -25,18 +25,14 @@
         }
         .container {
             display: flex;
-            flex-direction: column; /* Ubah dari row ke column */
             flex: 1;
-            padding: 40px; /* Tambahkan padding */
         }
         .form-container {
-            flex: 1;
+            flex: 2;
             padding: 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            max-width: 600px; /* Tambahkan lebar maksimum */
-            margin: 0 auto; /* Pusatkan form */
         }
         .form-container h2 {
             margin-bottom: 20px;
@@ -48,10 +44,9 @@
         .input-group {
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap; /* Agar input bisa terbungkus */
         }
         .input-group input {
-            width: calc(100% - 50px); /* Kurangi lebar untuk memberi ruang antara input */
+            width: 45%;
             padding: 10px;
             margin-bottom: 25px;
             border: 1px solid #ccc;
@@ -67,7 +62,9 @@
             margin-bottom: 20px;
             font-size: 16px;
             width: 150px; /* Ubah lebar sesuai kebutuhan */
-            align-self: center; /* Pusatkan tombol */
+            margin-left: auto; /* Geser tombol ke kanan */
+            margin-right: auto; /* Geser tombol ke kiri */
+            
         }
         button:hover {
             background-color: #06060f;
@@ -79,6 +76,13 @@
         .login-link a {
             color: #4e4e9c;
             text-decoration: none;
+        }
+        .image-container {
+            flex: 1;
+            background-image: url('gambar/image/register.jpg');
+            background-size: cover;
+            background-position: center;
+            border-left: 1px solid #ccc;
         }
         footer {
             display: flex;
@@ -143,6 +147,7 @@
                 <p class="login-link">Sudah punya akun? <a href="#">Masuk</a></p>
             </form>
         </div>
+        <div class="image-container"></div>
     </div>
     <footer>
         <div class="footer-item">
@@ -164,5 +169,7 @@
             </div>
         </div>
     </footer>
+
+    
 </body>
 </html>
